@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OMNIAVALUE</title>
+  <link rel="stylesheet" href="styleomniavalue2025.css" />
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="menu">
+        <a href="https://omniavalue.com/" target="_blank" rel="noopener noreferrer" class="logo">
+          <img src="img/Omnia-Value.png" alt="Logo" />
+        </a>
+        <span class="subtitulo-logo">Educación Financiera</span>
+        <input type="checkbox" id="menu" />
+        <label for="menu">
+          <img src="img/menu.png" alt="Menú" />
+        </label>
+        <nav class="navbar">
+          <ul>
+            <li><a href="#formulario">Registrar</a></li>
+            <li><a href="https://omniavalue.com/" target="_blank" rel="noopener noreferrer">Cursos</a></li>
+            <li><a href="#formulario">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header-content">
+        <div class="header-txt">
+          <h1>"Clase Gratuita Exclusiva para Guatemala"<br>
+            <a href="#formulario" class="fecha-link">12/07/2025</a>
+          </h1>
+
+          <div class="dropdown-menu">
+            <button class="dropdown-toggle">MODULOS ▼</button>
+            <ul class="dropdown-list">
+              <li><a href="#">Módulo 1: Fundamentos</a></li>
+              <li><a href="#">Módulo 2: Finanzas Personales</a></li>
+              <li><a href="#">Módulo 3: Inversiones</a></li>
+              <li><a href="#">Soporte y comunidad</a></li>
+            </ul>
+          </div>
+
+          <a href="#formulario" class="btn">Registrar</a>
+        </div>
+        <div class="header-img">
+          <img src="img/right.svg" alt="Imagen" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- FORMULARIO con imagen ilustrativa detrás -->
+  <div class="formulario-contenedor" id="formulario">
+    <img src="img/right.svg" alt="Imagen ilustrativa" class="formulario-fondo" />
+    
+    <div class="formulario-container">
+      <h2>Regístrese</h2>
+      <form 
+        action="https://formspree.io/f/xpwrozyq" 
+        method="POST"
+        onsubmit="setTimeout(() => { window.location.href = 'https://wa.me/50672292453?text=Hola%20gracias%20por%20registrarte%20en%20OMNIAVALUE'; }, 1000);"
+      >
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{8,15}" placeholder="Ej: 88888888" required />
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const toggleBtn = document.querySelector('.dropdown-toggle');
+    const dropdown = document.querySelector('.dropdown-list');
+
+    toggleBtn.addEventListener('click', () => {
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    });
+  </script>
+
+</body>
+</html>
